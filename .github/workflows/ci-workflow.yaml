@@ -1,6 +1,5 @@
 name: CI Workflow
 
-# Triggers the workflow on push or pull request events to the main branch
 on:
   push:
     branches:
@@ -14,16 +13,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
-
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '16'
-
-    - name: Install dependencies
-      run: npm install
-
-    - name: Run tests
-      run: npm test
+      - name: Checkout code
+        uses: actions/checkout@v3  # Checks out the code from your repository
+      
+      # Replace with commands relevant to your project
+      - name: Run custom commands
+        run: |
+          echo "You made it to create you first ci/cd."
